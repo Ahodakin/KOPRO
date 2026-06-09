@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kopro — Terrain Bingerville Est</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Roboto:wght@300;400;500&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+
+
+  <!-- ════════════════════════════════════
+     NAVIGATION
+════════════════════════════════════ -->
+  <nav class="nav">
+    <a class="nav-logo" href="index.html">
+      <img src="assets/images/logo2.png" alt="Kopro Logo" class="nav-logo-img">
+    </a>
+    <div class="nav-links">
+      <a class="nav-link" href="index.html">Accueil</a>
+      <a class="nav-link  active" href="projects.html">Projets</a>
+      <a class="nav-link" href="#">Comment ça marche</a>
+      <a class="nav-link" href="#">À propos</a>
+    </div>
+    <div class="nav-actions">
+      <a class="btn-secondary btn-sm" href="dashboard.html">Mon espace</a>
+      <a class="btn-primary btn-sm" href="subscribe.html">Investir <i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+  </nav>
+
+  <!-- ════════════════════════════════════
+     BANNIÈRE
+════════════════════════════════════ -->
+  <div class="page-banner">
+    <div class="breadcrumb">
+      <a class="breadcrumb-link" href="index.html">
+        <i class="fa-solid fa-house"></i> Accueil
+      </a>
+      <i class="fa-solid fa-chevron-right breadcrumb-sep"></i>
+      <a class="breadcrumb-link" href="projects.html">Projets</a>
+      <i class="fa-solid fa-chevron-right breadcrumb-sep"></i>
+      <span class="breadcrumb-current">Terrain Bingerville Est</span>
+    </div>
+    <div class="page-banner-inner">
+      <!-- Gauche -->
+      <div class="page-banner-left">
+        <h1 class="page-banner-title">Terrain Bingerville Est</h1>
+        <p class="page-banner-sub">
+          Terrain foncier à Bingerville · Rendement +25% · 15 mois
+        </p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ════════════════════════════════════
+     CONTENU PRINCIPAL
+════════════════════════════════════ -->
+  <div class="project-detail">
+
+    <a class="btn-back" href="projects.html">
+      <i class="fa-solid fa-arrow-left"></i> Retour aux projets
+    </a>
+
+    <div class="detail-grid">
+
+
+      <!-- ══════════════════════════════
+         COLONNE GAUCHE
+    ══════════════════════════════ -->
+      <div class="detail-left">
+
+        <!-- Image bannière projet -->
+        <div class="detail-banner">
+          <span class="detail-banner-emoji">🌿</span>
+          <div class="detail-banner-overlay"></div>
+          <div class="detail-banner-content">
+            <div class="detail-banner-title">Terrain Bingerville Est</div>
+            <div class="detail-banner-sub">
+              <i class="fa-solid fa-location-dot"></i>
+              Bingerville, Grand-Abidjan · Phase 1 — Foncier
+            </div>
+          </div>
+          <div class="badge badge-green detail-banner-badge">
+            <i class="fa-solid fa-circle-check"></i> Ouvert
+          </div>
+        </div>
+
+        <!-- Métriques clés -->
+        <div class="detail-metrics">
+
+          <div class="detail-metric">
+            <div class="detail-metric-val text-orange">+25%</div>
+            <div class="detail-metric-lbl">Rendement net cible</div>
+          </div>
+
+          <div class="detail-metric">
+            <div class="detail-metric-val">15 mois</div>
+            <div class="detail-metric-lbl">Durée du cycle</div>
+          </div>
+
+          <div class="detail-metric">
+            <div class="detail-metric-val">68%</div>
+            <div class="detail-metric-lbl">Financement atteint</div>
+          </div>
+
+          <div class="detail-metric">
+            <div class="detail-metric-val">500K</div>
+            <div class="detail-metric-lbl">Ticket minimum FCFA</div>
+          </div>
+
+          <div class="detail-metric">
+            <div class="detail-metric-val">68</div>
+            <div class="detail-metric-lbl">Investisseurs actifs</div>
+          </div>
+
+          <div class="detail-metric">
+            <div class="detail-metric-val">M15</div>
+            <div class="detail-metric-lbl">Versement estimé</div>
+          </div>
+
+        </div>
+
+        <!-- Onglets -->
+        <div class="detail-tabs">
+          <button class="detail-tab detail-tab--active" onclick="changerOnglet('apercu', this)">
+            Aperçu
+          </button>
+          <button class="detail-tab" onclick="changerOnglet('docs', this)">
+            Documents
+          </button>
+          <button class="detail-tab" onclick="changerOnglet('juridique', this)">
+            Juridique
+          </button>
+          <button class="detail-tab" onclick="changerOnglet('timeline', this)">
+            Timeline
+          </button>
+        </div>
+
+
+        <!-- ── ONGLET : APERÇU ── -->
+        <div class="tab-content tab-content--active" id="tab-apercu">
+
+          <h3 class="detail-section-title">Description du projet</h3>
+          <p class="detail-text">
+            Terrain de 2 500 m² situé dans la zone d'expansion de Bingerville,
+            en bordure de la future rocade d'Abidjan. L'ACD global a été obtenu
+            sans litige villageois. Le terrain sera viabilisé (eau, électricité,
+            voirie) puis revendu au détail avec une plus-value cible de +30%.
+          </p>
+
+          <h3 class="detail-section-title">Localisation</h3>
+          <div class="map-placeholder">
+            <i class="fa-solid fa-map-location-dot"></i>
+            Carte interactive — Bingerville, Grand-Abidjan
+          </div>
+
+          <h3 class="detail-section-title">Progression</h3>
+          <div class="timeline-list">
+
+            <div class="timeline-item">
+              <div class="timeline-dot timeline-dot--done">
+                <i class="fa-solid fa-check"></i>
+              </div>
+              <span class="timeline-label timeline-label--done">Promesse de vente signée</span>
+              <span class="timeline-date">Jan 2026</span>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-dot timeline-dot--done">
+                <i class="fa-solid fa-check"></i>
+              </div>
+              <span class="timeline-label timeline-label--done">Due diligence notariale</span>
+              <span class="timeline-date">Fév 2026</span>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-dot timeline-dot--done">
+                <i class="fa-solid fa-check"></i>
+              </div>
+              <span class="timeline-label timeline-label--done">Levée de fonds ouverte</span>
+              <span class="timeline-date">Mar 2026</span>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <span class="timeline-label">Clôture levée (100%)</span>
+              <span class="timeline-date">Avr 2026</span>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <span class="timeline-label">Viabilisation terrain</span>
+              <span class="timeline-date">Mai–Nov 2026</span>
+            </div>
+
+            <div class="timeline-item timeline-item--last">
+              <div class="timeline-dot"></div>
+              <span class="timeline-label">Revente & versement plus-value</span>
+              <span class="timeline-date">M15 estimé</span>
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <!-- ── ONGLET : DOCUMENTS ── -->
+        <div class="tab-content" id="tab-docs">
+
+          <h3 class="detail-section-title">Documents juridiques</h3>
+
+          <div class="doc-row">
+            <div class="doc-info">
+              <i class="fa-solid fa-file-pdf doc-icon"></i>
+              <div>
+                <div class="doc-name">Arrêté de Concession Définitive (ACD)</div>
+                <div class="doc-status doc-status--ok">
+                  <i class="fa-solid fa-circle-check"></i> Vérifié par notaire
+                </div>
+              </div>
+            </div>
+            <span class="doc-dl">
+              <i class="fa-solid fa-download"></i> Télécharger
+            </span>
+          </div>
+
+          <div class="doc-row">
+            <div class="doc-info">
+              <i class="fa-solid fa-file-pdf doc-icon"></i>
+              <div>
+                <div class="doc-name">Rapport de due diligence notariale</div>
+                <div class="doc-status doc-status--ok">
+                  <i class="fa-solid fa-circle-check"></i> Vérifié par notaire
+                </div>
+              </div>
+            </div>
+            <span class="doc-dl">
+              <i class="fa-solid fa-download"></i> Télécharger
+            </span>
+          </div>
+
+          <div class="doc-row">
+            <div class="doc-info">
+              <i class="fa-solid fa-file-pdf doc-icon"></i>
+              <div>
+                <div class="doc-name">Statuts de la SPV</div>
+                <div class="doc-status doc-status--ok">
+                  <i class="fa-solid fa-circle-check"></i> Vérifié par notaire
+                </div>
+              </div>
+            </div>
+            <span class="doc-dl">
+              <i class="fa-solid fa-download"></i> Télécharger
+            </span>
+          </div>
+
+          <div class="doc-row">
+            <div class="doc-info">
+              <i class="fa-solid fa-file-pdf doc-icon"></i>
+              <div>
+                <div class="doc-name">Contrat d'actionnaire type</div>
+                <div class="doc-status">
+                  <i class="fa-solid fa-clock"></i> En cours de validation
+                </div>
+              </div>
+            </div>
+            <span class="doc-dl">
+              <i class="fa-solid fa-download"></i> Télécharger
+            </span>
+          </div>
+
+        </div>
+
+
+        <!-- ── ONGLET : JURIDIQUE ── -->
+        <div class="tab-content" id="tab-juridique">
+
+          <h3 class="detail-section-title">Structure juridique</h3>
+          <p class="detail-text">
+            Le terrain est logé dans une SAS dédiée (SPV) :
+            <strong>Kopro Bingerville 01 SAS</strong>. En investissant,
+            vous devenez actionnaire de cette SPV, distincte de Kopro.
+            Vos fonds sont bloqués sur un compte séquestre notarial.
+          </p>
+
+          <div class="info-box info-box--orange">
+            <div class="info-box-title">
+              <i class="fa-solid fa-lock"></i> Garantie séquestre
+            </div>
+            <p>
+              Vos fonds ne transitent jamais par les comptes Kopro.
+              Notaire partenaire : <strong>Maître [Nom], Abidjan</strong>.
+            </p>
+          </div>
+
+        </div>
+
+
+        <!-- ── ONGLET : TIMELINE ── -->
+        <div class="tab-content" id="tab-timeline">
+
+          <h3 class="detail-section-title">Calendrier prévisionnel</h3>
+
+          <div class="cal-list">
+
+            <div class="cal-item">
+              <div class="cal-item-left">
+                <div class="cal-badge">M1–M3</div>
+                <div class="cal-line"></div>
+              </div>
+              <div class="cal-item-body">
+                <div class="cal-item-title">Montage juridique</div>
+                <div class="cal-item-desc">
+                  Constitution SPV, signature convention séquestre, promesse vente
+                </div>
+              </div>
+            </div>
+
+            <div class="cal-item">
+              <div class="cal-item-left">
+                <div class="cal-badge">M4–M6</div>
+                <div class="cal-line"></div>
+              </div>
+              <div class="cal-item-body">
+                <div class="cal-item-title">Levée de fonds</div>
+                <div class="cal-item-desc">
+                  Ouverture souscriptions, collecte 50M FCFA auprès de 100 investisseurs
+                </div>
+              </div>
+            </div>
+
+            <div class="cal-item">
+              <div class="cal-item-left">
+                <div class="cal-badge">M6–M12</div>
+                <div class="cal-line"></div>
+              </div>
+              <div class="cal-item-body">
+                <div class="cal-item-title">Viabilisation</div>
+                <div class="cal-item-desc">
+                  Obtention ACD définitif, viabilisation voirie, eau, électricité
+                </div>
+              </div>
+            </div>
+
+            <div class="cal-item cal-item--last">
+              <div class="cal-item-left">
+                <div class="cal-badge cal-badge--orange">M13–M15</div>
+              </div>
+              <div class="cal-item-body">
+                <div class="cal-item-title">Revente & versement</div>
+                <div class="cal-item-desc">
+                  Vente au détail des lots, distribution plus-value nette
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div><!-- /detail-left -->
+
+
+      <!-- ══════════════════════════════
+         COLONNE DROITE — SOUSCRIPTION
+    ══════════════════════════════ -->
+      <aside class="detail-sidebar">
+        <div class="subscribe-box">
+
+          <div class="subscribe-box-title">Investir dans ce projet</div>
+          <div class="subscribe-box-sub">Ticket minimum : 500 000 FCFA / part</div>
+
+          <div class="progress-bar">
+            <div class="progress-fill" style="width:68%"></div>
+          </div>
+
+          <div class="progress-meta">
+            <span><strong>34 M levés</strong> sur 50 M</span>
+            <span>68% · 32 jours</span>
+          </div>
+
+          <div class="price-big">
+            500 000 <span class="price-unit">FCFA / part</span>
+          </div>
+
+          <div class="parts-total">
+
+            <div class="parts-total-row">
+              <span>Montant (1 part)</span>
+              <span>500 000 FCFA</span>
+            </div>
+
+            <div class="parts-total-row">
+              <span>Frais de dossier (2%)</span>
+              <span>− 10 000 FCFA</span>
+            </div>
+
+            <hr class="parts-divider" />
+
+            <div class="parts-total-row parts-total-row--bold">
+              <span>Total engagé</span>
+              <span class="text-orange">490 000 FCFA</span>
+            </div>
+
+          </div>
+
+          <div class="plusvalue-box">
+            <i class="fa-solid fa-chart-line"></i>
+            Plus-value estimée : +124 950 FCFA en M15
+          </div>
+
+          <a class="subscribe-btn" href="subscribe.html">
+            Souscrire maintenant <i class="fa-solid fa-arrow-right" style="color: white;"></i>
+          </a>
+
+          <div class="trust-row">
+            <i class="fa-solid fa-lock"></i>
+            <span>Fonds sécurisés par séquestre notarial</span>
+          </div>
+
+          <div class="trust-row">
+            <i class="fa-solid fa-file-contract"></i>
+            <span>Contrat d'actionnaire SPV fourni</span>
+          </div>
+
+        </div>
+      </aside>
+
+
+    </div>
+  </div>
+
+
+<footer class="footer">
+
+  <!-- Bas du footer -->
+  <div class="footer-bottom">
+    <div class="footer-bottom-inner">
+      <span>© 2026 Kopro CI. Tous droits réservés.</span>
+      <div class="footer-socials">
+        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+      </div>
+    </div>
+  </div>
+
+</footer>
+  <!-- ════════════════════════════════════
+     SCRIPTS
+════════════════════════════════════ -->
+  <script>
+    function changerOnglet(nom, btn) {
+      document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('tab-content--active'));
+      document.querySelectorAll('.detail-tab').forEach(t => t.classList.remove('detail-tab--active'));
+      document.getElementById('tab-' + nom).classList.add('tab-content--active');
+      btn.classList.add('detail-tab--active');
+    }
+  </script>
+
+
+</body>
+
+</html>

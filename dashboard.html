@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kopro — Mon espace</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Roboto:wght@300;400;500&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body class="dash-body">
+
+  <!-- ══════════════════════════════════
+     SIDEBAR FIXE
+══════════════════════════════════ -->
+  <aside class="dash-sidebar">
+
+    <!-- Logo -->
+    <div class="dash-sidebar-logo">
+      <a class="nav-logo" href="index.html">
+        <img src="assets/images/logo2.png" alt="Kopro Logo" class="sidebar-logo-image" />
+      </a>
+    </div>
+
+    <!-- Profil -->
+    <div class="dash-sidebar-profile">
+      <div class="dash-user-avatar">AK</div>
+      <div>
+        <div class="dash-user-name">Amadou Koné</div>
+        <div class="kyc-badge"><i class="fa-solid fa-circle-check"></i> KYC validé</div>
+      </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="dash-nav">
+      <div class="dash-nav-label">Principal</div>
+      <a class="dash-nav-item dash-nav-item--active" href="dashboard.html">
+        <i class="fa-solid fa-chart-pie"></i>
+        <span>Mon portefeuille</span>
+      </a>
+      <a class="dash-nav-item" href="projects.html">
+        <i class="fa-solid fa-building"></i>
+        <span>Projets actifs</span>
+      </a>
+      <a class="dash-nav-item" href="#">
+        <i class="fa-solid fa-folder-open"></i>
+        <span>Mes documents</span>
+      </a>
+      <a class="dash-nav-item" href="#">
+        <i class="fa-solid fa-arrow-right-arrow-left"></i>
+        <span>Transactions</span>
+      </a>
+
+      <div class="dash-nav-label">Compte</div>
+      <a class="dash-nav-item" href="#">
+        <i class="fa-solid fa-user"></i>
+        <span>Mon profil</span>
+      </a>
+      <a class="dash-nav-item" href="#">
+        <i class="fa-solid fa-bell"></i>
+        <span>Notifications</span>
+        <span class="dash-nav-badge">1</span>
+      </a>
+      <a class="dash-nav-item" href="#">
+        <i class="fa-solid fa-gear"></i>
+        <span>Paramètres</span>
+      </a>
+    </nav>
+
+    <!-- Bas sidebar -->
+    <div class="dash-sidebar-footer">
+      <a class="dash-nav-item dash-nav-item--muted" href="index.html">
+        <i class="fa-solid fa-arrow-left"></i>
+        <span>Retour au site</span>
+      </a>
+      <a class="dash-nav-item dash-nav-item--danger" href="#">
+        <i class="fa-solid fa-right-from-bracket"></i>
+        <span>Déconnexion</span>
+      </a>
+    </div>
+
+  </aside>
+
+  <!-- ══════════════════════════════════
+     ZONE PRINCIPALE (topbar + contenu)
+══════════════════════════════════ -->
+  <div class="dash-wrapper">
+
+    <!-- TOPBAR FIXE -->
+    <header class="dash-topbar">
+      <!-- Burger mobile -->
+      <button class="dash-burger" onclick="toggleSidebar()">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+      <h2 class="dash-topbar-title">Mon portefeuille</h2>
+
+      <div class="dash-topbar-right">
+        <a class="btn-primary btn-sm" href="subscribe.html">
+          <i class="fa-solid fa-plus"></i> Investir
+        </a>
+        <div class="dash-topbar-notif">
+          <i class="fa-solid fa-bell"></i>
+          <span class="dash-topbar-notif-dot"></span>
+        </div>
+        <div class="dash-topbar-user">
+          <div class="dash-user-avatar dash-user-avatar--sm">AK</div>
+          <span class="dash-topbar-user-name">Amadou Koné</span>
+          <i class="fa-solid fa-chevron-down"></i>
+        </div>
+      </div>
+    </header>
+
+    <!-- CONTENU SCROLLABLE -->
+    <main class="dash-main">
+
+      <!-- Salutation -->
+      <div class="dash-greeting">
+        <div>
+          <h1 class="dash-greeting-name">
+            Bonjour, Amadou <i class="fa-solid fa-hand-wave text-orange"></i>
+          </h1>
+          <p class="dash-greeting-sub">Voici l'état de votre portefeuille immobilier Kopro.</p>
+        </div>
+        <div class="dash-greeting-date">
+          <i class="fa-regular fa-calendar"></i> Juin 2026
+        </div>
+      </div>
+
+      <!-- KPIs -->
+      <div class="dash-kpis">
+        <div class="kpi-card">
+          <div class="kpi-card-top">
+            <div class="kpi-icon"><i class="fa-solid fa-briefcase"></i></div>
+            <span class="kpi-badge kpi-badge--green">
+              <i class="fa-solid fa-arrow-trend-up"></i> +49%
+            </span>
+          </div>
+          <div class="kpi-val">1 490 000 <span class="kpi-unit">FCFA</span></div>
+          <div class="kpi-lbl">Total investi</div>
+          <div class="kpi-delta"><i class="fa-solid fa-arrow-trend-up"></i> +490K depuis M1</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-card-top">
+            <div class="kpi-icon kpi-icon--orange"><i class="fa-solid fa-chart-line"></i></div>
+            <span class="kpi-badge kpi-badge--green">
+              <i class="fa-solid fa-arrow-trend-up"></i> +25%
+            </span>
+          </div>
+          <div class="kpi-val kpi-val--orange">+127 500 <span class="kpi-unit">FCFA</span></div>
+          <div class="kpi-lbl">Plus-value estimée</div>
+          <div class="kpi-delta"><i class="fa-solid fa-arrow-trend-up"></i> ≈ +25% en M15</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-card-top">
+            <div class="kpi-icon kpi-icon--blue"><i class="fa-solid fa-building"></i></div>
+          </div>
+          <div class="kpi-val">2</div>
+          <div class="kpi-lbl">Projets actifs</div>
+          <div class="kpi-delta">1 en cours · 1 clôturé</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-card-top">
+            <div class="kpi-icon kpi-icon--green"><i class="fa-solid fa-calendar-check"></i></div>
+          </div>
+          <div class="kpi-val kpi-val--sm">Août 2027</div>
+          <div class="kpi-lbl">Prochain versement</div>
+          <div class="kpi-delta">Phase 1 · M15</div>
+        </div>
+      </div>
+
+      <!-- Grille contenu -->
+      <div class="dash-grid">
+
+        <!-- Colonne gauche -->
+        <div class="dash-col">
+
+          <div class="dash-card">
+            <div class="dash-card-header">
+              <h3 class="dash-card-title">Mes investissements</h3>
+              <a class="dash-card-link" href="projects.html">
+                Voir tous <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+            <div class="invest-row">
+              <div class="invest-dot"></div>
+              <div class="invest-info">
+                <div class="invest-name">Terrain Bingerville Est</div>
+                <div class="invest-sub">Phase 1 · 3 parts · 1 470 000 FCFA</div>
+              </div>
+              <div class="invest-right">
+                <div class="invest-amount">1 470 000 FCFA</div>
+                <div class="invest-return">
+                  <i class="fa-solid fa-arrow-trend-up"></i> +25% estimé
+                </div>
+              </div>
+            </div>
+            <div class="invest-row">
+              <div class="invest-dot"></div>
+              <div class="invest-info">
+                <div class="invest-name">Résidence Grand-Bassam</div>
+                <div class="invest-sub">Phase 2 VEFA · 1 part · 980 000 FCFA</div>
+              </div>
+              <div class="invest-right">
+                <div class="invest-amount">980 000 FCFA</div>
+                <div class="invest-return">
+                  <i class="fa-solid fa-arrow-trend-up"></i> +29% estimé
+                </div>
+              </div>
+            </div>
+            <div class="invest-row">
+              <div class="invest-dot invest-dot--green"></div>
+              <div class="invest-info">
+                <div class="invest-name">Terrain Jacqueville</div>
+                <div class="invest-sub">Phase 1 · Clôturé M15</div>
+              </div>
+              <div class="invest-right">
+                <div class="invest-amount">+122 500 FCFA</div>
+                <div class="invest-return invest-return--done">
+                  <i class="fa-solid fa-circle-check"></i> Versé
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="dash-card">
+            <div class="dash-card-header">
+              <h3 class="dash-card-title">Documents récents</h3>
+              <a class="dash-card-link" href="#">Voir tous <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+            <div class="doc-row">
+              <div class="doc-info">
+                <i class="fa-solid fa-file-certificate doc-icon"></i>
+                <div>
+                  <div class="doc-name">Attestation actionnaire — Bingerville Est</div>
+                  <div class="doc-date">15 Mar 2026</div>
+                </div>
+              </div>
+              <span class="doc-dl"><i class="fa-solid fa-download"></i></span>
+            </div>
+            <div class="doc-row">
+              <div class="doc-info">
+                <i class="fa-solid fa-receipt doc-icon"></i>
+                <div>
+                  <div class="doc-name">Reçu de paiement — 1 470 000 FCFA</div>
+                  <div class="doc-date">15 Mar 2026</div>
+                </div>
+              </div>
+              <span class="doc-dl"><i class="fa-solid fa-download"></i></span>
+            </div>
+            <div class="doc-row">
+              <div class="doc-info">
+                <i class="fa-solid fa-file-signature doc-icon"></i>
+                <div>
+                  <div class="doc-name">Contrat SPV signé — Bingerville 01</div>
+                  <div class="doc-date">15 Mar 2026</div>
+                </div>
+              </div>
+              <span class="doc-dl"><i class="fa-solid fa-download"></i></span>
+            </div>
+            <div class="doc-row">
+              <div class="doc-info">
+                <i class="fa-solid fa-scale-balanced doc-icon"></i>
+                <div>
+                  <div class="doc-name">Rapport notaire — Due diligence</div>
+                  <div class="doc-date">10 Fév 2026</div>
+                </div>
+              </div>
+              <span class="doc-dl"><i class="fa-solid fa-download"></i></span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Colonne droite -->
+        <div class="dash-col">
+
+          <div class="dash-card">
+            <div class="dash-card-header">
+              <h3 class="dash-card-title">Évolution du portefeuille</h3>
+              <span class="dash-card-tag">12 derniers mois</span>
+            </div>
+            <div class="dash-chart">
+              <div class="dash-chart-bar" style="height:40%"></div>
+              <div class="dash-chart-bar" style="height:55%"></div>
+              <div class="dash-chart-bar" style="height:45%"></div>
+              <div class="dash-chart-bar" style="height:70%"></div>
+              <div class="dash-chart-bar" style="height:65%"></div>
+              <div class="dash-chart-bar" style="height:80%"></div>
+              <div class="dash-chart-bar" style="height:68%"></div>
+              <div class="dash-chart-bar" style="height:90%"></div>
+              <div class="dash-chart-bar" style="height:85%"></div>
+              <div class="dash-chart-bar" style="height:95%"></div>
+              <div class="dash-chart-bar" style="height:88%"></div>
+              <div class="dash-chart-bar dash-chart-bar--active" style="height:100%"></div>
+            </div>
+            <div class="dash-chart-labels">
+              <span>Mar 2025</span><span>Mar 2026</span>
+            </div>
+          </div>
+
+          <div class="dash-card">
+            <div class="dash-card-header">
+              <h3 class="dash-card-title">Notifications</h3>
+              <span class="dash-card-tag dash-card-tag--orange">1 non lue</span>
+            </div>
+            <div class="notif-item notif-item--unread">
+              <div class="notif-dot notif-dot--unread"></div>
+              <div>
+                <div class="notif-text">Bingerville Est : 68% financé. Il reste 16M FCFA à lever.</div>
+                <div class="notif-time"><i class="fa-regular fa-clock"></i> Il y a 2h</div>
+              </div>
+            </div>
+            <div class="notif-item">
+              <div class="notif-dot"></div>
+              <div>
+                <div class="notif-text">Votre KYC a été validé par notre équipe.</div>
+                <div class="notif-time"><i class="fa-regular fa-clock"></i> Hier</div>
+              </div>
+            </div>
+            <div class="notif-item">
+              <div class="notif-dot"></div>
+              <div>
+                <div class="notif-text">Nouveau projet disponible : Résidence Grand-Bassam.</div>
+                <div class="notif-time"><i class="fa-regular fa-clock"></i> Il y a 3 jours</div>
+              </div>
+            </div>
+            <div class="notif-item">
+              <div class="notif-dot"></div>
+              <div>
+                <div class="notif-text">Rapport mensuel projet Jacqueville disponible.</div>
+                <div class="notif-time"><i class="fa-regular fa-clock"></i> Il y a 5 jours</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </main>
+
+    <footer class="dash-footer">
+      <span>© 2026 Kopro CI. Tous droits réservés.</span>
+    </footer>
+
+  </div>
+
+
+  <!-- Overlay mobile sidebar -->
+  <div class="dash-overlay" id="dash-overlay" onclick="toggleSidebar()"></div>
+
+
+
+  <script>
+    function toggleSidebar() {
+      document.querySelector('.dash-sidebar').classList.toggle('dash-sidebar--open');
+      document.getElementById('dash-overlay').classList.toggle('dash-overlay--visible');
+    }
+  </script>
+
+</body>
+
+</html>
