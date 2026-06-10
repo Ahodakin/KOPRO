@@ -87,6 +87,8 @@ a {
 /* ─────────────────────────────────────────────
    NAVIGATION
 ───────────────────────────────────────────── */
+
+
 .nav {
   position: sticky;
   top: 0;
@@ -104,30 +106,12 @@ a {
 .nav-logo {
   display: flex;
   align-items: center;
-  gap: 8px;
 }
 
-.nav-logo-icon {
-  width: 36px;
-  height: 36px;
-  border-radius: 8px;
-  background: var(--charcoal);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  overflow: hidden;
-}
-
-.nav-logo-icon::after {
-  content: '';
-  position: absolute;
-  bottom: 8px;
-  right: 8px;
-  width: 10px;
-  height: 10px;
-  background: var(--orange);
-  transform: rotate(45deg);
+.nav-logo-img {
+  height: 40px;
+  width: auto;
+  display: block;
 }
 
 .nav-links {
@@ -222,6 +206,62 @@ a {
 .btn-secondary:hover {
   background: var(--charcoal);
   color: white;
+}
+
+/* Burger — caché par défaut */
+.nav-burger {
+  display: none;
+  border: none;
+  background: none;
+  font-size: 20px;
+  color: var(--charcoal);
+  cursor: pointer;
+  padding: 4px 8px;
+}
+
+
+/* ── RESPONSIVE ── */
+@media (max-width: 768px) {
+
+  .nav {
+    flex-wrap: wrap;
+    height: auto;
+    padding: 12px clamp(16px, 4vw, 48px);
+  }
+
+  /* Burger visible */
+  .nav-burger { display: block; }
+
+  /* Boutons "Mon espace" cachés sur mobile */
+  .nav-actions .btn-secondary { display: none; }
+
+  /* Menu caché par défaut */
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    width: 100%;
+    padding: 8px 0 12px;
+    border-top: 1px solid var(--gray-300);
+    margin-top: 10px;
+  }
+
+  /* Menu ouvert */
+  .nav-links.nav-links--open {
+    display: flex;
+  }
+
+  .nav-link {
+    width: 100%;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--gray-100);
+    font-size: 15px;
+  }
+
+  .nav-link:last-child {
+    border-bottom: none;
+  }
 }
 
 /* Variantes de taille */
