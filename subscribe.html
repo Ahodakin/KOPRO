@@ -10,21 +10,43 @@
 </head>
 <body>
 
-<nav class="nav">
-  <a class="nav-logo" href="index.html">
-      <img src="assets/images/logo2.png" alt="Kopro Logo" class="nav-logo-img">
-  </a>
-  <div class="nav-links">
-    <a class="nav-link" href="index.html">Accueil</a>
-    <a class="nav-link" href="projects.html">Projets</a>
-    <a class="nav-link" href="#">Comment ça marche</a>
-    <a class="nav-link" href="#">À propos</a>
-  </div>
-  <div class="nav-actions">
-    <a class="btn-secondary btn-sm" href="dashboard.html">Mon espace</a>
-    <a class="btn-primary btn-sm" href="subscribe.html">Investir <i class="fa-solid fa-arrow-right"></i></a>
-  </div>
-</nav>
+  <nav class="nav">
+
+    <a class="nav-logo" href="index.html">
+      <img src="assets/images/logo2.png" alt="Kopro Logo" class="nav-logo-img" />
+    </a>
+
+    <div class="nav-links" id="nav-links">
+      <!-- Fermer -->
+      <button class="nav-close" onclick="toggleNav()">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <a class="nav-link" href="index.html">Accueil</a>
+      <a class="nav-link" href="projects.html">Projets</a>
+      <a class="nav-link" href="#" onclick="toggleNav()">Comment ça marche</a>
+      <a class="nav-link" href="#" onclick="toggleNav()">À propos</a>
+
+      <div class="nav-menu-actions">
+        <a class="btn-secondary btn-full-mobile" href="dashboard.html">Mon espace</a>
+        <a class="btn-primary btn-full-mobile" href="subscribe.html">
+          Investir <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+
+    <div class="nav-actions">
+      <a class="btn-secondary btn-sm nav-desktop-only" href="dashboard.html">Mon espace</a>
+      <a class="btn-primary btn-sm" href="subscribe.html">
+        Investir <i class="fa-solid fa-arrow-right"></i>
+      </a>
+      <button class="nav-burger" id="nav-burger" onclick="toggleNav()">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+
+  </nav>
+
 
 <div class="sub-wrap">
   <a class="btn-back" href="detail.html">
