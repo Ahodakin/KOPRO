@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kopro — Souscription · Étape 1</title>
+  <title>Kopro — Souscription · Étape 3</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
   <link rel="stylesheet" href="css/style.css" />
@@ -45,8 +45,8 @@
 
 <div class="sub-wrap">
 
-  <a class="btn-back" href="detail.html">
-    <i class="fa-solid fa-arrow-left"></i> Retour au projet
+  <a class="btn-back" href="subscribe-step2.html">
+    <i class="fa-solid fa-arrow-left"></i> Retour
   </a>
 
   <!-- Barre d'étapes -->
@@ -54,24 +54,28 @@
 
     <div class="sub-step-item">
       <div class="sub-step-col">
-        <div class="sub-step-dot sub-step-dot--active">1</div>
-        <div class="sub-step-lbl sub-step-lbl--active">Compte</div>
+        <div class="sub-step-dot sub-step-dot--done">
+          <i class="fa-solid fa-check"></i>
+        </div>
+        <div class="sub-step-lbl">Compte</div>
       </div>
-      <div class="sub-connector"></div>
+      <div class="sub-connector sub-connector--done"></div>
     </div>
 
     <div class="sub-step-item">
       <div class="sub-step-col">
-        <div class="sub-step-dot">2</div>
+        <div class="sub-step-dot sub-step-dot--done">
+          <i class="fa-solid fa-check"></i>
+        </div>
         <div class="sub-step-lbl">KYC</div>
       </div>
-      <div class="sub-connector"></div>
+      <div class="sub-connector sub-connector--done"></div>
     </div>
 
     <div class="sub-step-item">
       <div class="sub-step-col">
-        <div class="sub-step-dot">3</div>
-        <div class="sub-step-lbl">Projet</div>
+        <div class="sub-step-dot sub-step-dot--active">3</div>
+        <div class="sub-step-lbl sub-step-lbl--active">Projet</div>
       </div>
       <div class="sub-connector"></div>
     </div>
@@ -101,55 +105,70 @@
 
   </div>
 
-  <!-- Contenu étape 1 -->
+  <!-- Contenu étape 3 -->
   <div class="sub-card">
 
-    <h2 class="sub-card-title">Créez votre compte</h2>
-    <p class="sub-card-sub">
-      Inscription gratuite en 2 minutes.
-      Déjà un compte ? <span class="link-orange">Se connecter</span>
-    </p>
+    <h2 class="sub-card-title">Votre investissement</h2>
+    <p class="sub-card-sub">Terrain Bingerville Est — Phase 1 Foncier</p>
 
-    <div class="form-row">
-      <div class="form-group">
-        <label class="form-label">Prénom</label>
-        <input class="form-input" placeholder="Amadou" />
+    <!-- Résumé du projet -->
+    <div class="project-recap">
+      <div class="project-recap-header">
+        <div>
+          <div class="project-recap-name">Terrain Bingerville Est</div>
+          <div class="project-recap-loc">
+            <i class="fa-solid fa-map-pin"></i>
+            Grand-Abidjan · Rendement cible +25%
+          </div>
+        </div>
+        <div class="badge badge-green">Ouvert</div>
       </div>
-      <div class="form-group">
-        <label class="form-label">Nom</label>
-        <input class="form-input" placeholder="Koné" />
+      <div class="progress-bar">
+        <div class="progress-fill" style="width:68%"></div>
+      </div>
+      <div class="project-recap-meta">68% financé · 32 jours restants</div>
+    </div>
+
+    <!-- Sélecteur de parts -->
+    <div class="form-group">
+      <label class="form-label">Nombre de parts (500 000 FCFA / part)</label>
+      <div class="parts-ctrl">
+        <button class="parts-btn" onclick="changerParts(-1)">−</button>
+        <div class="parts-val" id="parts-display">1</div>
+        <button class="parts-btn" onclick="changerParts(1)">+</button>
+        <span class="parts-suffix" id="parts-suffix">part</span>
       </div>
     </div>
 
-    <div class="form-group">
-      <label class="form-label">Email</label>
-      <input class="form-input" type="email" placeholder="amadou@email.com" />
+    <!-- Récapitulatif montant -->
+    <div class="parts-total">
+      <div class="parts-total-row">
+        <span>Valeur des parts</span>
+        <span id="parts-brut">500 000 FCFA</span>
+      </div>
+      <div class="parts-total-row">
+        <span>Frais de dossier (2%)</span>
+        <span id="parts-frais">− 10 000 FCFA</span>
+      </div>
+      <div class="parts-total-row">
+        <span>Plus-value estimée (M15)</span>
+        <span id="parts-pv">≈ +127 500 FCFA</span>
+      </div>
+      <hr class="parts-divider" />
+      <div class="parts-total-row parts-total-row--bold">
+        <span>Montant à payer</span>
+        <span class="text-orange" id="parts-total">490 000 FCFA</span>
+      </div>
     </div>
 
-    <div class="form-group">
-      <label class="form-label">Téléphone (WhatsApp)</label>
-      <input class="form-input" placeholder="+225 07 00 00 00 00" />
+    <div class="btn-row">
+      <a class="btn-secondary btn-row-back" href="subscribe-step2.html">
+        <i class="fa-solid fa-arrow-left"></i> Retour
+      </a>
+      <a class="btn-primary btn-row-next" href="subscribe-step4.html">
+        Confirmer <i class="fa-solid fa-arrow-right"></i>
+      </a>
     </div>
-
-    <div class="form-group">
-      <label class="form-label">Pays de résidence</label>
-      <select class="form-input">
-        <option>Côte d'Ivoire</option>
-        <option>France</option>
-        <option>Belgique</option>
-        <option>Canada</option>
-        <option>Autre</option>
-      </select>
-    </div>
-
-    <div class="form-group">
-      <label class="form-label">Mot de passe</label>
-      <input class="form-input" type="password" placeholder="••••••••" />
-    </div>
-
-    <a class="btn-primary btn-full" href="subscribe-step2.html">
-      Continuer <i class="fa-solid fa-arrow-right"></i>
-    </a>
 
   </div>
 </div>
@@ -178,6 +197,24 @@
     overlay.classList.toggle('nav-overlay--visible');
     document.body.style.overflow =
       links.classList.contains('nav-links--open') ? 'hidden' : '';
+  }
+
+  /* Sélecteur de parts */
+  let nbParts = 1;
+
+  function changerParts(delta) {
+    nbParts = Math.max(1, nbParts + delta);
+    const brut  = nbParts * 500000;
+    const frais = nbParts * 10000;
+    const total = brut - frais;
+    const pv    = nbParts * 127500;
+
+    document.getElementById('parts-display').textContent = nbParts;
+    document.getElementById('parts-suffix').textContent  = nbParts > 1 ? 'parts' : 'part';
+    document.getElementById('parts-brut').textContent    = brut.toLocaleString('fr-FR') + ' FCFA';
+    document.getElementById('parts-frais').textContent   = '− ' + frais.toLocaleString('fr-FR') + ' FCFA';
+    document.getElementById('parts-pv').textContent      = '≈ +' + pv.toLocaleString('fr-FR') + ' FCFA';
+    document.getElementById('parts-total').textContent   = total.toLocaleString('fr-FR') + ' FCFA';
   }
 </script>
 </body>

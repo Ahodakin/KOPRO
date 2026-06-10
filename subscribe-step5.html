@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kopro — Souscription · Étape 5</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <a class="nav-logo" href="index.html">
+    <img src="assets/images/logo2.png" alt="Kopro Logo" class="nav-logo-img" />
+  </a>
+  <div class="nav-links" id="nav-links">
+    <button class="nav-close" onclick="toggleNav()">
+      <i class="fa-solid fa-xmark"></i>
+    </button>
+    <a class="nav-link" href="index.html">Accueil</a>
+    <a class="nav-link" href="projects.html">Projets</a>
+    <a class="nav-link" href="#" onclick="toggleNav()">Comment ça marche</a>
+    <a class="nav-link" href="#" onclick="toggleNav()">À propos</a>
+    <div class="nav-menu-actions">
+      <a class="btn-secondary btn-full-mobile" href="dashboard.html">Mon espace</a>
+      <a class="btn-primary btn-full-mobile" href="subscribe.html">
+        Investir <i class="fa-solid fa-arrow-right"></i>
+      </a>
+    </div>
+  </div>
+  <div class="nav-actions">
+    <a class="btn-secondary btn-sm nav-desktop-only" href="dashboard.html">Mon espace</a>
+    <a class="btn-primary btn-sm" href="subscribe.html">
+      Investir <i class="fa-solid fa-arrow-right"></i>
+    </a>
+    <button class="nav-burger" id="nav-burger" onclick="toggleNav()">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+  </div>
+</nav>
+<div class="nav-overlay" id="nav-overlay" onclick="toggleNav()"></div>
+
+
+<div class="sub-wrap">
+
+  <a class="btn-back" href="subscribe-step4.html">
+    <i class="fa-solid fa-arrow-left"></i> Retour
+  </a>
+
+  <!-- Barre d'étapes -->
+  <div class="sub-steps">
+
+    <div class="sub-step-item">
+      <div class="sub-step-col">
+        <div class="sub-step-dot sub-step-dot--done">
+          <i class="fa-solid fa-check"></i>
+        </div>
+        <div class="sub-step-lbl">Compte</div>
+      </div>
+      <div class="sub-connector sub-connector--done"></div>
+    </div>
+
+    <div class="sub-step-item">
+      <div class="sub-step-col">
+        <div class="sub-step-dot sub-step-dot--done">
+          <i class="fa-solid fa-check"></i>
+        </div>
+        <div class="sub-step-lbl">KYC</div>
+      </div>
+      <div class="sub-connector sub-connector--done"></div>
+    </div>
+
+    <div class="sub-step-item">
+      <div class="sub-step-col">
+        <div class="sub-step-dot sub-step-dot--done">
+          <i class="fa-solid fa-check"></i>
+        </div>
+        <div class="sub-step-lbl">Projet</div>
+      </div>
+      <div class="sub-connector sub-connector--done"></div>
+    </div>
+
+    <div class="sub-step-item">
+      <div class="sub-step-col">
+        <div class="sub-step-dot sub-step-dot--done">
+          <i class="fa-solid fa-check"></i>
+        </div>
+        <div class="sub-step-lbl">Paiement</div>
+      </div>
+      <div class="sub-connector sub-connector--done"></div>
+    </div>
+
+    <div class="sub-step-item">
+      <div class="sub-step-col">
+        <div class="sub-step-dot sub-step-dot--active">5</div>
+        <div class="sub-step-lbl sub-step-lbl--active">Signature</div>
+      </div>
+      <div class="sub-connector"></div>
+    </div>
+
+    <div class="sub-step-item">
+      <div class="sub-step-col">
+        <div class="sub-step-dot">6</div>
+        <div class="sub-step-lbl">Confirmation</div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Contenu étape 5 -->
+  <div class="sub-card">
+
+    <h2 class="sub-card-title">Signature du contrat</h2>
+    <p class="sub-card-sub">Lisez et signez votre contrat d'actionnaire SPV.</p>
+
+    <div class="contract-box">
+      <strong>CONTRAT D'ACTIONNAIRE — KOPRO BINGERVILLE 01 SAS</strong><br/><br/>
+      Entre Kopro CI SAS et l'investisseur soussigné, il est convenu ce qui suit :<br/><br/>
+      <strong>Article 1 — Objet :</strong> L'Actionnaire acquiert des parts de la SPV Kopro Bingerville 01 SAS,
+      représentant une quote-part du terrain sis à Bingerville, Grand-Abidjan.<br/><br/>
+      <strong>Article 2 — Séquestre :</strong> Les fonds sont déposés sur le compte séquestre de
+      Maître [Notaire], Notaire à Abidjan, et ne seront libérés qu'après sécurisation complète
+      du titre de propriété.<br/><br/>
+      <strong>Article 3 — Rendement :</strong> L'Actionnaire percevra sa quote-part de la plus-value nette,
+      déduction faite des frais de gestion (15%) et des frais notariaux (1%).<br/><br/>
+      <strong>Article 4 — Durée :</strong> Le cycle est estimé à 15 mois. La Société s'engage à
+      reverser les fonds dans un délai maximum de 24 mois.
+    </div>
+
+    <label class="checkbox-row">
+      <input type="checkbox" id="accept-contract" />
+      <span>J'ai lu et j'accepte les termes du contrat d'actionnaire SPV Kopro Bingerville 01 SAS</span>
+    </label>
+
+    <div class="otp-box">
+      <div class="otp-box-label">
+        <i class="fa-solid fa-key"></i>
+        Code OTP — envoyé au +225 07 *** ** 00
+      </div>
+      <div class="otp-inputs">
+        <input class="otp-input" maxlength="1" oninput="otpSuivant(this, 0)" />
+        <input class="otp-input" maxlength="1" oninput="otpSuivant(this, 1)" />
+        <input class="otp-input" maxlength="1" oninput="otpSuivant(this, 2)" />
+        <input class="otp-input" maxlength="1" oninput="otpSuivant(this, 3)" />
+        <input class="otp-input" maxlength="1" oninput="otpSuivant(this, 4)" />
+        <input class="otp-input" maxlength="1" oninput="otpSuivant(this, 5)" />
+      </div>
+      <div class="otp-resend">
+        Pas reçu ? <span class="link-orange">Renvoyer le code</span>
+      </div>
+    </div>
+
+    <div class="btn-row">
+      <a class="btn-secondary btn-row-back" href="subscribe-step4.html">
+        <i class="fa-solid fa-arrow-left"></i> Retour
+      </a>
+      <a class="btn-primary btn-row-next" href="subscribe-step6.html">
+        Signer et finaliser <i class="fa-solid fa-check"></i>
+      </a>
+    </div>
+
+  </div>
+</div>
+
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-bottom">
+    <div class="footer-bottom-inner">
+      <span>© 2026 Kopro CI. Tous droits réservés.</span>
+      <div class="footer-socials">
+        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  function toggleNav() {
+    const links   = document.getElementById('nav-links');
+    const overlay = document.getElementById('nav-overlay');
+    links.classList.toggle('nav-links--open');
+    overlay.classList.toggle('nav-overlay--visible');
+    document.body.style.overflow =
+      links.classList.contains('nav-links--open') ? 'hidden' : '';
+  }
+
+  function otpSuivant(input, index) {
+    const champs = document.querySelectorAll('.otp-input');
+    if (input.value.length >= 1 && index < 5) {
+      champs[index + 1].focus();
+    }
+  }
+</script>
+</body>
+</html>

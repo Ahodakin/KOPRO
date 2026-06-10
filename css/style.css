@@ -295,6 +295,12 @@ a {
   border-radius: 100px;
 }
 
+.pay-method-icon img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  border-radius: 8px;
+}
 
 /* ─────────────────────────────────────────────
    SECTIONS
@@ -1173,7 +1179,7 @@ a {
 .pay-method {
   border: 1.5px solid var(--gray-300);
   border-radius: 10px;
-  padding: 14px 10px;
+  padding: 4px 1px;
   text-align: center;
   cursor: pointer;
   font-size: 12px;
@@ -1184,7 +1190,7 @@ a {
 
 .pay-method:hover,
 .pay-method--selected { border-color: var(--orange); background: var(--orange-pale); color: var(--orange); }
-.pay-method-icon      { font-size: 18px; margin-bottom: 6px; }
+/* .pay-method-icon      { font-size: 18px; margin-bottom: 6px; } */
 
 /* Contrat */
 .contract-box {

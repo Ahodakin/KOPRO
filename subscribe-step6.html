@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kopro — Souscription · Étape 1</title>
+  <title>Kopro — Souscription · Confirmation</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
   <link rel="stylesheet" href="css/style.css" />
@@ -45,113 +45,122 @@
 
 <div class="sub-wrap">
 
-  <a class="btn-back" href="detail.html">
-    <i class="fa-solid fa-arrow-left"></i> Retour au projet
-  </a>
-
-  <!-- Barre d'étapes -->
+  <!-- Barre d'étapes — tout complété -->
   <div class="sub-steps">
 
     <div class="sub-step-item">
       <div class="sub-step-col">
-        <div class="sub-step-dot sub-step-dot--active">1</div>
-        <div class="sub-step-lbl sub-step-lbl--active">Compte</div>
+        <div class="sub-step-dot sub-step-dot--done">
+          <i class="fa-solid fa-check"></i>
+        </div>
+        <div class="sub-step-lbl">Compte</div>
       </div>
-      <div class="sub-connector"></div>
+      <div class="sub-connector sub-connector--done"></div>
     </div>
 
     <div class="sub-step-item">
       <div class="sub-step-col">
-        <div class="sub-step-dot">2</div>
+        <div class="sub-step-dot sub-step-dot--done">
+          <i class="fa-solid fa-check"></i>
+        </div>
         <div class="sub-step-lbl">KYC</div>
       </div>
-      <div class="sub-connector"></div>
+      <div class="sub-connector sub-connector--done"></div>
     </div>
 
     <div class="sub-step-item">
       <div class="sub-step-col">
-        <div class="sub-step-dot">3</div>
+        <div class="sub-step-dot sub-step-dot--done">
+          <i class="fa-solid fa-check"></i>
+        </div>
         <div class="sub-step-lbl">Projet</div>
       </div>
-      <div class="sub-connector"></div>
+      <div class="sub-connector sub-connector--done"></div>
     </div>
 
     <div class="sub-step-item">
       <div class="sub-step-col">
-        <div class="sub-step-dot">4</div>
+        <div class="sub-step-dot sub-step-dot--done">
+          <i class="fa-solid fa-check"></i>
+        </div>
         <div class="sub-step-lbl">Paiement</div>
       </div>
-      <div class="sub-connector"></div>
+      <div class="sub-connector sub-connector--done"></div>
     </div>
 
     <div class="sub-step-item">
       <div class="sub-step-col">
-        <div class="sub-step-dot">5</div>
+        <div class="sub-step-dot sub-step-dot--done">
+          <i class="fa-solid fa-check"></i>
+        </div>
         <div class="sub-step-lbl">Signature</div>
       </div>
-      <div class="sub-connector"></div>
+      <div class="sub-connector sub-connector--done"></div>
     </div>
 
     <div class="sub-step-item">
       <div class="sub-step-col">
-        <div class="sub-step-dot">6</div>
-        <div class="sub-step-lbl">Confirmation</div>
+        <div class="sub-step-dot sub-step-dot--active">6</div>
+        <div class="sub-step-lbl sub-step-lbl--active">Confirmation</div>
       </div>
     </div>
 
   </div>
 
-  <!-- Contenu étape 1 -->
+  <!-- Contenu étape 6 -->
   <div class="sub-card">
+    <div class="success-box">
 
-    <h2 class="sub-card-title">Créez votre compte</h2>
-    <p class="sub-card-sub">
-      Inscription gratuite en 2 minutes.
-      Déjà un compte ? <span class="link-orange">Se connecter</span>
-    </p>
-
-    <div class="form-row">
-      <div class="form-group">
-        <label class="form-label">Prénom</label>
-        <input class="form-input" placeholder="Amadou" />
+      <div class="success-icon">
+        <i class="fa-solid fa-circle-check"></i>
       </div>
-      <div class="form-group">
-        <label class="form-label">Nom</label>
-        <input class="form-input" placeholder="Koné" />
+
+      <h2 class="success-title">Félicitations !</h2>
+
+      <p class="success-sub">
+        Votre investissement est confirmé. Vous êtes maintenant actionnaire de
+        <strong>Kopro Bingerville 01 SAS</strong>.
+      </p>
+
+      <div class="success-details">
+        <div class="success-row">
+          <span>Projet</span>
+          <strong>Terrain Bingerville Est</strong>
+        </div>
+        <div class="success-row">
+          <span>Parts acquises</span>
+          <strong>1 part</strong>
+        </div>
+        <div class="success-row">
+          <span>Montant investi</span>
+          <strong>490 000 FCFA</strong>
+        </div>
+        <div class="success-row">
+          <span>Plus-value estimée</span>
+          <strong>+127 500 FCFA</strong>
+        </div>
+        <div class="success-row">
+          <span>Rendement estimé</span>
+          <strong>+25,1 % sur 15 mois</strong>
+        </div>
+        <div class="success-row">
+          <span>Versement estimé</span>
+          <strong>M15 (≈ Août 2027)</strong>
+        </div>
       </div>
+
+      <p class="success-email">
+        <i class="fa-solid fa-envelope"></i>
+        Un email de confirmation et votre attestation ont été envoyés.
+      </p>
+
+      <a class="btn-primary btn-full" href="dashboard.html">
+        Accéder à mon espace <i class="fa-solid fa-arrow-right"></i>
+      </a>
+
     </div>
-
-    <div class="form-group">
-      <label class="form-label">Email</label>
-      <input class="form-input" type="email" placeholder="amadou@email.com" />
-    </div>
-
-    <div class="form-group">
-      <label class="form-label">Téléphone (WhatsApp)</label>
-      <input class="form-input" placeholder="+225 07 00 00 00 00" />
-    </div>
-
-    <div class="form-group">
-      <label class="form-label">Pays de résidence</label>
-      <select class="form-input">
-        <option>Côte d'Ivoire</option>
-        <option>France</option>
-        <option>Belgique</option>
-        <option>Canada</option>
-        <option>Autre</option>
-      </select>
-    </div>
-
-    <div class="form-group">
-      <label class="form-label">Mot de passe</label>
-      <input class="form-input" type="password" placeholder="••••••••" />
-    </div>
-
-    <a class="btn-primary btn-full" href="subscribe-step2.html">
-      Continuer <i class="fa-solid fa-arrow-right"></i>
-    </a>
-
   </div>
+
 </div>
 
 

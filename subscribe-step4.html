@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kopro — Souscription · Étape 1</title>
+  <title>Kopro — Souscription · Étape 4</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
   <link rel="stylesheet" href="css/style.css" />
@@ -45,8 +45,8 @@
 
 <div class="sub-wrap">
 
-  <a class="btn-back" href="detail.html">
-    <i class="fa-solid fa-arrow-left"></i> Retour au projet
+  <a class="btn-back" href="subscribe-step3.html">
+    <i class="fa-solid fa-arrow-left"></i> Retour
   </a>
 
   <!-- Barre d'étapes -->
@@ -54,32 +54,38 @@
 
     <div class="sub-step-item">
       <div class="sub-step-col">
-        <div class="sub-step-dot sub-step-dot--active">1</div>
-        <div class="sub-step-lbl sub-step-lbl--active">Compte</div>
+        <div class="sub-step-dot sub-step-dot--done">
+          <i class="fa-solid fa-check"></i>
+        </div>
+        <div class="sub-step-lbl">Compte</div>
       </div>
-      <div class="sub-connector"></div>
+      <div class="sub-connector sub-connector--done"></div>
     </div>
 
     <div class="sub-step-item">
       <div class="sub-step-col">
-        <div class="sub-step-dot">2</div>
+        <div class="sub-step-dot sub-step-dot--done">
+          <i class="fa-solid fa-check"></i>
+        </div>
         <div class="sub-step-lbl">KYC</div>
       </div>
-      <div class="sub-connector"></div>
+      <div class="sub-connector sub-connector--done"></div>
     </div>
 
     <div class="sub-step-item">
       <div class="sub-step-col">
-        <div class="sub-step-dot">3</div>
+        <div class="sub-step-dot sub-step-dot--done">
+          <i class="fa-solid fa-check"></i>
+        </div>
         <div class="sub-step-lbl">Projet</div>
       </div>
-      <div class="sub-connector"></div>
+      <div class="sub-connector sub-connector--done"></div>
     </div>
 
     <div class="sub-step-item">
       <div class="sub-step-col">
-        <div class="sub-step-dot">4</div>
-        <div class="sub-step-lbl">Paiement</div>
+        <div class="sub-step-dot sub-step-dot--active">4</div>
+        <div class="sub-step-lbl sub-step-lbl--active">Paiement</div>
       </div>
       <div class="sub-connector"></div>
     </div>
@@ -101,55 +107,53 @@
 
   </div>
 
-  <!-- Contenu étape 1 -->
+  <!-- Contenu étape 4 -->
   <div class="sub-card">
 
-    <h2 class="sub-card-title">Créez votre compte</h2>
+    <h2 class="sub-card-title">Choisissez votre moyen de paiement</h2>
     <p class="sub-card-sub">
-      Inscription gratuite en 2 minutes.
-      Déjà un compte ? <span class="link-orange">Se connecter</span>
+      Montant à régler : <strong class="text-orange">490 000 FCFA</strong>
     </p>
 
-    <div class="form-row">
-      <div class="form-group">
-        <label class="form-label">Prénom</label>
-        <input class="form-input" placeholder="Amadou" />
+    <div class="pay-methods">
+      <div class="pay-method pay-method--selected" onclick="choisirPaiement(this, 'wave')">
+        <div class="pay-method-icon">
+            <img src="assets/images/wave.png" alt="Wave CI">
+        </div>
       </div>
-      <div class="form-group">
-        <label class="form-label">Nom</label>
-        <input class="form-input" placeholder="Koné" />
+      <div class="pay-method pay-method" onclick="choisirPaiement(this, 'orange')">
+        <div class="pay-method-icon">
+            <img src="assets/images/orange.jpg" alt="Orange Money">
+        </div>
+      </div>
+      <div class="pay-method" onclick="choisirPaiement(this, 'mtn')">
+        <div class="pay-method-icon"><img src="assets/images/MTN.png" alt="MTN MoMo"></div>
       </div>
     </div>
 
-    <div class="form-group">
-      <label class="form-label">Email</label>
-      <input class="form-input" type="email" placeholder="amadou@email.com" />
+    <!-- Info Wave (par défaut) -->
+    <div class="info-box info-box--orange" id="pay-info-wave">
+      <i class="fa-solid fa-mobile-screen"></i>
+      Vous serez redirigé vers <strong>Wave CI</strong> pour finaliser le paiement.
+      Retour automatique après confirmation.
     </div>
 
-    <div class="form-group">
-      <label class="form-label">Téléphone (WhatsApp)</label>
-      <input class="form-input" placeholder="+225 07 00 00 00 00" />
+    <!-- Info Virement (caché par défaut) -->
+    <div class="info-box info-box--gray" id="pay-info-virement" style="display:none">
+      <strong>Coordonnées du compte séquestre notarial :</strong><br/>
+      IBAN : CI93 0000 0000 0000 0000 0000<br/>
+      Banque : SGBCI · BIC : SGBICIAB<br/>
+      Référence : KOPRO-BV01-0042
     </div>
 
-    <div class="form-group">
-      <label class="form-label">Pays de résidence</label>
-      <select class="form-input">
-        <option>Côte d'Ivoire</option>
-        <option>France</option>
-        <option>Belgique</option>
-        <option>Canada</option>
-        <option>Autre</option>
-      </select>
+    <div class="btn-row">
+      <a class="btn-secondary btn-row-back" href="subscribe-step3.html">
+        <i class="fa-solid fa-arrow-left"></i> Retour
+      </a>
+      <a class="btn-primary btn-row-next" href="subscribe-step5.html">
+        Payer maintenant <i class="fa-solid fa-arrow-right"></i>
+      </a>
     </div>
-
-    <div class="form-group">
-      <label class="form-label">Mot de passe</label>
-      <input class="form-input" type="password" placeholder="••••••••" />
-    </div>
-
-    <a class="btn-primary btn-full" href="subscribe-step2.html">
-      Continuer <i class="fa-solid fa-arrow-right"></i>
-    </a>
 
   </div>
 </div>
@@ -178,6 +182,13 @@
     overlay.classList.toggle('nav-overlay--visible');
     document.body.style.overflow =
       links.classList.contains('nav-links--open') ? 'hidden' : '';
+  }
+
+  function choisirPaiement(el, methode) {
+    document.querySelectorAll('.pay-method').forEach(m => m.classList.remove('pay-method--selected'));
+    el.classList.add('pay-method--selected');
+    document.getElementById('pay-info-wave').style.display     = methode === 'wave'     ? 'block' : 'none';
+    document.getElementById('pay-info-virement').style.display = methode === 'virement' ? 'block' : 'none';
   }
 </script>
 </body>
