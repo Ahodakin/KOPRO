@@ -17,14 +17,27 @@
   </a>
 
   <div class="nav-links" id="nav-links">
-    <a class="nav-link active" href="index.html">Accueil</a>
-    <a class="nav-link" href="projects.html">Projets</a>
-    <a class="nav-link" href="#">Comment ça marche</a>
-    <a class="nav-link" href="#">À propos</a>
+    <!-- Fermer -->
+    <button class="nav-close" onclick="toggleNav()">
+      <i class="fa-solid fa-xmark"></i>
+    </button>
+
+    <a class="nav-link" href="index.html" onclick="toggleNav()">Accueil</a>
+    <a class="nav-link" href="projects.html" onclick="toggleNav()">Projets</a>
+    <a class="nav-link" href="#" onclick="toggleNav()">Comment ça marche</a>
+    <a class="nav-link" href="#" onclick="toggleNav()">À propos</a>
+
+    <!-- Boutons à l'intérieur du menu mobile -->
+    <div class="nav-menu-actions">
+      <a class="btn-secondary btn-full-mobile" href="dashboard.html">Mon espace</a>
+      <a class="btn-primary btn-full-mobile" href="subscribe.html">
+        Investir <i class="fa-solid fa-arrow-right"></i>
+      </a>
+    </div>
   </div>
 
   <div class="nav-actions">
-    <a class="btn-secondary btn-sm" href="dashboard.html">Mon espace</a>
+    <a class="btn-secondary btn-sm nav-desktop-only" href="dashboard.html">Mon espace</a>
     <a class="btn-primary btn-sm" href="subscribe.html">
       Investir <i class="fa-solid fa-arrow-right"></i>
     </a>
@@ -34,6 +47,9 @@
   </div>
 
 </nav>
+
+<!-- Overlay sombre -->
+<div class="nav-overlay" id="nav-overlay" onclick="toggleNav()"></div>
 
 <!-- HERO -->
 <section class="hero">
@@ -278,12 +294,13 @@
 
 <script>
   function toggleNav() {
-    const links  = document.getElementById('nav-links');
-    const burger = document.getElementById('nav-burger');
+    const links   = document.getElementById('nav-links');
+    const overlay = document.getElementById('nav-overlay');
     links.classList.toggle('nav-links--open');
-    burger.innerHTML = links.classList.contains('nav-links--open')
-      ? '<i class="fa-solid fa-xmark"></i>'
-      : '<i class="fa-solid fa-bars"></i>';
+    overlay.classList.toggle('nav-overlay--visible');
+    // Bloquer le scroll quand le menu est ouvert
+    document.body.style.overflow =
+      links.classList.contains('nav-links--open') ? 'hidden' : '';
   }
 </script>
 </body>
