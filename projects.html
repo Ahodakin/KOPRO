@@ -213,12 +213,15 @@
 
 
   <script>
-    document.querySelectorAll('.filter-btn').forEach(btn => {
-      btn.addEventListener('click', function () {
-        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('filter-btn--active'));
-        this.classList.add('filter-btn--active');
-      });
-    });
+    function toggleNav() {
+      const links = document.getElementById('nav-links');
+      const overlay = document.getElementById('nav-overlay');
+      links.classList.toggle('nav-links--open');
+      overlay.classList.toggle('nav-overlay--visible');
+      // Bloquer le scroll quand le menu est ouvert
+      document.body.style.overflow =
+        links.classList.contains('nav-links--open') ? 'hidden' : '';
+    }
   </script>
 </body>
 

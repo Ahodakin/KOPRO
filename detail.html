@@ -480,11 +480,14 @@
      SCRIPTS
 ════════════════════════════════════ -->
   <script>
-    function changerOnglet(nom, btn) {
-      document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('tab-content--active'));
-      document.querySelectorAll('.detail-tab').forEach(t => t.classList.remove('detail-tab--active'));
-      document.getElementById('tab-' + nom).classList.add('tab-content--active');
-      btn.classList.add('detail-tab--active');
+    function toggleNav() {
+      const links = document.getElementById('nav-links');
+      const overlay = document.getElementById('nav-overlay');
+      links.classList.toggle('nav-links--open');
+      overlay.classList.toggle('nav-overlay--visible');
+      // Bloquer le scroll quand le menu est ouvert
+      document.body.style.overflow =
+        links.classList.contains('nav-links--open') ? 'hidden' : '';
     }
   </script>
 
